@@ -1,8 +1,9 @@
 const path = require("path");
 const common = require("./webpack.common");
-const {merge} = require("webpack-merge");
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const { merge } = require("webpack-merge");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = merge(common, {
   mode: "development",
@@ -15,14 +16,30 @@ module.exports = merge(common, {
       template: "./src/index.html"
     }),
     new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: [
-          "style-loader", //3. Inject styles into DOM
-          "css-loader", //2. Turns css into commonjs
+          MiniCssExtractPlugin.loader, //4. Extract css into files
+          "css-loader", //3. Turns css into commonjs
+          {
+            loader: "postcss-loader",     //2. Process css with postcss
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    "postcss-preset-env",
+                    {
+                      // Options
+                    },
+                  ],
+                ],
+              },
+            }
+          },
           "sass-loader" //1. Turns sass into css
         ]
       }
