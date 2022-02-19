@@ -5,7 +5,7 @@ module.exports = {
       colors: {
         primary: {
           blue: 'hsl(231, 69%, 60%)',
-          red: 'hsl(0, 94%, 66 %)'
+          red: 'hsl(0, 94%, 66%)'
         },
 
         secondary: {

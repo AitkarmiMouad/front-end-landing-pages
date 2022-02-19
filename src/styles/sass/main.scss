@@ -5,3 +5,97 @@
 @import '__colors.scss';
 @import '__fonts.scss';
 
+.basicFont {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight-400;
+}
+
+nav a {
+    color: $secondary-blue-200;
+}
+
+.shape {
+    height: 300px;
+    width: 850px;
+    background-color: $primary-blue;
+    display: inline-block;
+}
+
+@layer components {
+    .btn-primary {
+        @apply p-2 basicFont bg-primary-red text-white rounded-md w-24 shadow-md hover:bg-white border-2 border-primary-red hover:text-primary-red;
+    }
+
+    .btn-secondary {
+        @apply p-2 basicFont bg-primary-blue text-white rounded-md shadow-gray-400 shadow-lg border-2 border-primary-blue hover:text-primary-blue hover:bg-gray-100;
+    }
+}
+
+
+/* Tab styling (optional) */
+
+.tl_container {
+    @apply mt-14;
+}
+
+.tl_list {
+    display: flex;
+    padding: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: left;
+    list-style: none;
+}
+
+.tl_list li {
+    margin: 0;
+    width: 33.3333%;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
+}
+
+/* tab & panel colour */
+
+.tl_list a {
+    @apply basicFont block py-4 px-2 text-secondary-blue-100 border-b-4;
+}
+
+.tl_list a:hover {
+    color: $primary-red;
+}
+
+.tl_list a[aria-selected="true"] {
+    border-color: $primary-red;
+    color: $secondary-blue-200;
+}
+
+
+/* White focus ring - so you can see when it's focussed (not required) */
+.tl_section h2:focus {
+    outline: 1px solid currentcolor;
+}
+
+
+/* Section styling (optional) */
+
+.tl_section {
+    padding: 1rem 1.5rem;
+    min-height: 8rem;
+    border-radius: 0 0 4px 4px;
+    text-shadow: none;
+}
+
+.tl_section h2 {
+    margin-top: 1rem;
+}
+
+
+/* 
+Section styling (required)
+Removes hidden sections from the keychain. 
+Only used when JavaScript is available.
+*/
+[role="tabpanel"][aria-hidden="true"] {
+    display: none;
+}

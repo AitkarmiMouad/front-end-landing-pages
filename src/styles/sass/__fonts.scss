@@ -1,5 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
-$fontSize:18px;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+$fontSize:1rem;
 $fontFamily: 'Rubik', sans-serif;
+$fontWeight-300: 300;
 $fontWeight-400: 400;
 $fontWeight-500: 500;
+
+$fontsProperties:'fontSize-primary','fontFamily-primary','fontWeight-300','font-weight-400','font-weight-500';
+
+@each $var in $fontsProperties{
+    .#{$var}{
+
+        @if $var == 'fontSize-primary'{
+            font-size: $fontSize;
+        }
+        @if $var == 'fontFamily-primary'{
+            font-family: $fontFamily;
+        }
+        @if $var == 'font-weight-300'{
+            font-weight: $fontWeight-300;
+        }
+        @if $var == 'font-weight-400'{
+            font-weight: $fontWeight-400;
+        }
+        @if $var == 'font-weight-500'{
+            font-weight: $fontWeight-500;
+        }
+    }
+    
+}
