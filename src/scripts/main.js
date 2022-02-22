@@ -1,4 +1,9 @@
 import '../styles/sass/main.scss';
+import '../../node_modules/flowbite/dist/flowbite.js';
+// Doesn't Work well
+// import '../../node_modules/jquery/dist/jquery.min.js';
+
+
 
 var accessibleTabs6 = (function () {
 

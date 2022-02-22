@@ -99,3 +99,23 @@ Only used when JavaScript is available.
 [role="tabpanel"][aria-hidden="true"] {
     display: none;
 }
+
+
+// Styling the tailwind accordion
+#accordion-flush button[aria-expanded="true"] svg {
+    @apply text-primary-red;
+}
+
+#accordion-flush svg {
+    @apply text-primary-blue;
+}
+
+#accordion-flush button:hover {
+    @apply text-primary-red;
+}
+
+
+// Styling input email in form when error
+.errorM {
+    @apply hidden;
+}
