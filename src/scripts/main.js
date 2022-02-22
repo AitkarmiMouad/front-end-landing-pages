@@ -4,6 +4,21 @@ import '../../node_modules/flowbite/dist/flowbite.js';
 // import '../../node_modules/jquery/dist/jquery.min.js';
 
 
+document.getElementById('validationBtn').addEventListener('click', () => {
+  if (!document.getElementById('email-adress-icon').checkValidity()) {
+    document.getElementById('errorIcon').classList.remove('errorM');
+    document.getElementById('errorMessage').classList.remove('errorM');
+    document.getElementById('email-adress-icon').classList.add('input');
+    
+  } else {
+    document.getElementById('errorIcon').classList.add('errorM');
+    document.getElementById('errorMessage').classList.add('errorM');
+    document.getElementById('email-adress-icon').classList.remove('input');
+
+  }
+});
+
+
 
 var accessibleTabs6 = (function () {
 

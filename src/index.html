@@ -9,12 +9,12 @@
     <script src="https://kit.fontawesome.com/ba251c0104.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="height: 1000vh;">
-    <div class="lg:container">
+<body class="">
+    <div>
 
         <header class="px-28 my-6 grid grid-cols-2 items-center">
             <img src="images/logo-bookmark.svg" alt="" class="justify-self-start h-auto w-auto">
-            <nav class="float-right space-x-4 justify-self-end">
+            <nav class="float-right space-x-4 justify-self-end hidden md:block">
                 <a class="p-2 uppercase hover:text-primary-red text-gray-800 basicFont" href="">Features</a>
                 <a class="p-2 uppercase hover:text-primary-red text-gray-800 basicFont" href="">Pricing</a>
                 <a class="p-2 uppercase hover:text-primary-red text-gray-800 basicFont" href="">Contact</a>
@@ -283,28 +283,46 @@
             <input type="button" class="text-sm mx-auto mt-10 block p-2 btn-secondary w-fit" value="More Info"><br>
 
         </section>
-        <footer class="bg-primary-blue h-96 mt-28 p-0.5">
-
-            <p class="uppercase mb-8 mt-12 tracking-widest text-white basicFont w-fit mx-auto">35.000+ already joined
-            </p>
-            <h1 class="mx-auto w-fit mb-8 mt-12 text-white text-3xl fontFamily-primary font-weight-500 text-center">
-                Stay up-to-date with what<br>we're doing</h1>
-
-
-            <form class="w-fit mx-auto" action="">
-
-                <div class="relative mt-1 w-fit inline">
-                    <div class="absolute inset-y-0 right-0 items-center pr-3 pointer-events-none" id="errorIcon" >
-                        <i class="fa-solid fa-circle-exclamation text-primary-red bg-transparent text-lg"></i>
-                    </div>
-                    <input type="email" id="email-adress-icon" class="inline bg-gray-50 border h-10 border-gray-300 text-gray-900 text-sm rounded-t-sm focus:ring-blue-500 focus:border-blue-500 w-72 pr-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your email">
-                    <div id="errorMessage" class="absolute bg-primary-red text-white w-72 px-2 py-0.5 text-sm rounded-b-lg">Whoops! error</div>
-                </div>
-                <input class="btn-primary p-2 border-0 h-10" type="submit" value="Contact Us">
-            </form>
-
-        </footer>
     </div>
+    <footer class="bg-primary-blue h-96 mt-28 bottom-0 relative">
+        <br>
+        <p class="uppercase mb-8 mt-5 tracking-widest text-white basicFont w-fit mx-auto">35.000+ already joined
+        </p>
+        <h1 class="mx-auto w-fit mb-8 mt-12 text-white text-3xl fontFamily-primary font-weight-500 text-center">
+            Stay up-to-date with what<br>we're doing</h1>
+
+
+        <form id="form" class="w-fit mx-auto" action="" onsubmit="return false" novalidate>
+            <div class="relative mt-1 w-fit inline">
+                <!-- <div id="errorIcon" class="absolute inset-y-0 right-0 items-center pr-3 pointer-events-none errorM">
+                    <i class="fa-solid fa-circle-exclamation text-primary-red bg-transparent text-lg"></i>
+                </div> -->
+                <img id="errorIcon" src="images/icon-error.svg"
+                    class="absolute inset-y-0 right-0 items-center pr-3 pointer-events-none errorM" alt="">
+                <input type="email" id="email-adress-icon"
+                    class="inline bg-gray-50 border h-10 border-gray-300 text-gray-900 text-sm rounded-t-sm focus:ring-blue-500 focus:border-blue-500 w-72 pr-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter your email" required>
+                <div id="errorMessage"
+                    class="absolute bg-primary-red text-white w-72 px-2 py-0.5 text-sm rounded-b-lg errorM">Whoops!
+                    error</div>
+            </div>
+            <input id="validationBtn" class="btn-primary p-2 border-0 h-10" type="submit" value="Contact Us">
+        </form>
+        <div class="h-20 w-full mt-8 bg-secondary-blue-200 grid grid-cols-6 items-center absolute bottom-0">
+            <img src="images/logo-white.svg" alt="" class="h-auto w-fit ml-14 col-span-1">
+            <div class="mx-0 col-span-2">
+                <a class="p-2 uppercase hover:text-primary-red text-white basicFont" href="">Features</a>
+                <a class="p-2 uppercase hover:text-primary-red text-white basicFont" href="">Pricing</a>
+                <a class="p-2 uppercase hover:text-primary-red text-white basicFont" href="">Contact</a>
+            </div>
+            <div class="mr-32 ml-auto w-fit col-span-3">
+                <i class="fa-brands fa-facebook hover:text-primary-red text-white bg-transparent text-2xl mx-3"></i>
+                <i class="w-6 h-6 fab fa-twitter hover:text-primary-red text-white text-2xl mx-3"></i>
+            </div>
+
+        </div>
+
+    </footer>
 </body>
 
 </html>

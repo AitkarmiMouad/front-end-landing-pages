@@ -119,3 +119,6 @@ Only used when JavaScript is available.
 .errorM {
     @apply hidden;
 }
+.input {
+    @apply border-2 border-primary-red;
+}
