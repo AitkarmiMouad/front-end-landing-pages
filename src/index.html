@@ -11,20 +11,28 @@
 
 <body class="">
     <div>
-
-        <header class="px-28 my-6 grid grid-cols-2 items-center">
-            <img src="images/logo-bookmark.svg" alt="" class="justify-self-start h-auto w-auto">
-            <nav class="float-right space-x-4 justify-self-end hidden md:block">
-                <a class="p-2 uppercase hover:text-primary-red text-gray-800 basicFont" href="">Features</a>
-                <a class="p-2 uppercase hover:text-primary-red text-gray-800 basicFont" href="">Pricing</a>
-                <a class="p-2 uppercase hover:text-primary-red text-gray-800 basicFont" href="">Contact</a>
-                <input class="btn-primary uppercase" type="button" value="Login">
+        <header class="px-28 my-6 grid grid-cols-2 items-center md-max:px-10">
+            <img src="images/logo-bookmark.svg" alt="" class="justify-self-start h-auto w-auto ">
+            <nav class="float-right space-x-4 justify-self-end">
+                <div class="inline md-max:hidden">
+                    <a class="p-2 uppercase hover:text-primary-red text-gray-800 basicFont" href="">Features</a>
+                    <a class="p-2 uppercase hover:text-primary-red text-gray-800 basicFont" href="">Pricing</a>
+                    <a class="p-2 uppercase hover:text-primary-red text-gray-800 basicFont" href="">Contact</a>
+                    <input class="btn-primary uppercase" type="button" value="Login">
+                </div>
+                <div>
+                    <div class="lg:hidden">
+                        <img src="images/icon-hamburger.svg" alt="">
+                    </div>
+                </div>
             </nav>
         </header>
         <section>
-            <div class="grid grid-cols-2 gap-4 overflow-x-clip mt-20">
-                <div class="px-24 my-6 items-center">
-                    <h1 class="mb-8 mt-12 text-secondary-blue-200 text-5xl fontFamily-primary font-weight-500">A Simple
+            <div class="lg:grid lg:grid-cols-2 gap-4 overflow-x-clip mt-20 md-max:flex md-max:flex-col">
+                <div class="lg:px-24 md-max:mx-10 md-max:text-center my-6 items-center md-max:order-2">
+                    <h1
+                        class="mb-8 mt-12 text-secondary-blue-200 text-5xl md-max:text-3xl fontFamily-primary font-weight-500">
+                        A Simple
                         Bookmark Manager</h1>
                     <p class="mb-8 text-secondary-blue-100 basicFont">Lorem ipsum, dolor sit amet consectetur
                         adipisicing elit. Provident repellendus ut amet neque minima voluptas facilis doloremque
@@ -34,76 +42,87 @@
                         class="text-sm p-3 btn-secondary w-36 ml-3 bg-gray-100 text-secondary-blue-200 border-gray-100 hover:border-secondary-blue-200 hover:text-secondary-blue-200"
                         value="Get it on Firefox">
                 </div>
-                <div class="float-right relative left-24">
-                    <img src="images/illustration-hero.svg" alt="">
-                    <div class="shape rounded-l-full absolute top-52 -z-10 left-52" id="shape-1"></div>
+                <div class="lg:float-right relative right-0 lg:ml-auto md-max:order-1">
+                    <img src="images/illustration-hero.svg" class="lg:mr-5" alt="">
+                    <div class="shape rounded-l-full absolute lg:top-52 top-5 -z-10 lg:-right-80 md-max:left-20"
+                        id="shape-1"></div>
                 </div>
             </div>
             <div class="mt-36">
                 <h1
                     class="mx-auto w-fit mb-8 mt-12 text-secondary-blue-200 text-3xl fontFamily-primary font-weight-500">
                     Features</h1>
-                <p class="mb-8 text-secondary-blue-100 basicFont w-4/12 mx-auto text-center">Lorem ipsum dolor sit amet
+                <p class="mb-8 text-secondary-blue-100 basicFont lg:w-4/12 lg:mx-auto mx-10 text-center">Lorem ipsum
+                    dolor sit amet
                     consectetur, adipisicing elit. Quae adipisci officiis minus eligendi totam
                     aliquam amet iure, recusandae laborum quisquam aspernatur distinctio eveniet animi cumque modi eum
                     consequuntur fuga. Eaque,rem sit iure.</p>
             </div>
 
-            <div class="tl_container">
+            <div class="tl_container md-max:mx-10">
 
                 <!-- A plain set of anchor links in HTML -->
 
-                <ul class="tl_list w-4/6 mx-auto">
+                <ul class="tl_list lg:w-4/6 lg:mx-auto md-max:flex md-max:flex-col">
                     <li><a href="#A" class="a ON" id="a">Simple Bookmarking</a></li>
                     <li><a href="#B" class=b id="b">Speedy Sharing</a></li>
                     <li><a href="#C" class=c id="c">Easy Sharing</a></li>
                 </ul>
 
-                <section id=A class="tl_section grid grid-cols-2 mt-10">
-                    <div class="float-left relative left-24">
-                        <img src="images/illustration-features-tab-1.svg" alt="">
-                        <div class="shape rounded-l-full absolute top-24 -z-10 -left-96 rotate-180" id="shape-1">
+                <section id=A class="tl_section lg:grid lg:grid-cols-2 md-max:flex md-max:flex-col mt-10">
+                    <div class="float-left relative left-24 md-max:mb-72">
+                        <img src="images/illustration-features-tab-1.svg"
+                            class="md-max:absolute md-max:right-24 md-max:scale-125 ml-0" alt="">
+                        <div class="shape rounded-l-full absolute lg:top-24 md-max:top-5 -z-10 -left-96 rotate-180"
+                            style="width:550px" id="shape-1">
                         </div>
                     </div>
-                    <div class="ml-9 pt-10">
+                    <div class="lg:ml-9 lg:pt-10 md-max:text-center items-center md-max:mt-11">
                         <h2
-                            class="mx-auto mb-8 mt-12 text-secondary-blue-200 text-3xl fontFamily-primary font-weight-500">
+                            class="mb-8 mt-12 text-secondary-blue-200 fontFamily-primary text-3xl font-weight-500 md-max:mx-auto">
                             Bookmark in one click</h2>
-                        <p class="mb-8 text-secondary-blue-100 basicFont w-3/4">Lorem ipsum, dolor sit amet consectetur
+                        <p class="mb-8 text-secondary-blue-100 basicFont md-max:w-4/12 w-3/4 md-max:text-center">Lorem
+                            ipsum, dolor sit amet consectetur
                             adipisicing elit. Provident repellendus ut amet neque minima voluptas facilis doloremque
                             reprehenderit aspernatur inventore odio dicta, quia quis dolores?</p>
                         <input type="button" class="text-sm p-3 btn-secondary w-36" value="More Info">
                     </div>
                 </section>
 
-                <section id=B class="tl_section grid grid-cols-2 mt-10">
-                    <div class="float-left relative left-24">
-                        <img src="images/illustration-features-tab-2.svg" alt="">
-                        <div class="shape rounded-l-full absolute top-24 -z-10 -left-96 rotate-180" id="shape-1">
+                <section id=B class="tl_section lg:grid lg:grid-cols-2 md-max:flex md-max:flex-col mt-10">
+                    <div class="float-left relative left-24 md-max:mb-72">
+                        <img src="images/illustration-features-tab-2.svg"
+                            class="md-max:absolute md-max:right-24 md-max:scale-125 ml-0" alt="">
+                        <div class="shape rounded-l-full absolute lg:top-24 md-max:top-5 -z-10 -left-96 rotate-180"
+                            style="width:550px" id="shape-1">
                         </div>
                     </div>
-                    <div class="ml-9 pt-10">
+                    <div class="lg:ml-9 lg:pt-10 md-max:text-center items-center md-max:mt-11">
                         <h2
-                            class="mx-auto mb-8 mt-12 text-secondary-blue-200 text-3xl fontFamily-primary font-weight-500">
+                            class="mb-8 mt-12 text-secondary-blue-200 fontFamily-primary text-3xl font-weight-500 md-max:mx-auto">
                             Intelligent search</h2>
-                        <p class="mb-8 text-secondary-blue-100 basicFont w-3/4">Lorem ipsum, dolor sit amet consectetur
+                        <p class="mb-8 text-secondary-blue-100 basicFont md-max:w-4/12 w-3/4 md-max:text-center">Lorem
+                            ipsum, dolor sit amet consectetur
                             adipisicing elit. Provident repellendus ut amet neque minima voluptas facilis doloremque
                             reprehenderit aspernatur inventore odio dicta, quia quis dolores?</p>
                         <input type="button" class="text-sm p-3 btn-secondary w-36" value="More Info">
                     </div>
                 </section>
 
-                <section id=C class="tl_section grid grid-cols-2 mt-10">
-                    <div class="float-left relative left-24">
-                        <img src="images/illustration-features-tab-3.svg" alt="">
-                        <div class="shape rounded-l-full absolute top-24 -z-10 -left-96 rotate-180" id="shape-1">
+                <section id=C class="tl_section lg:grid lg:grid-cols-2 md-max:flex md-max:flex-col mt-10">
+                    <div class="float-left relative left-24 md-max:mb-72">
+                        <img src="images/illustration-features-tab-3.svg"
+                            class="md-max:absolute md-max:right-24 md-max:scale-125 ml-0" alt="">
+                        <div class="shape rounded-l-full absolute lg:top-24 md-max:top-5 -z-10 -left-96 rotate-180"
+                            style="width:550px" id="shape-1">
                         </div>
                     </div>
-                    <div class="ml-9 pt-10">
+                    <div class="lg:ml-9 lg:pt-10 md-max:text-center items-center md-max:mt-11">
                         <h2
-                            class="mx-auto mb-8 mt-12 text-secondary-blue-200 text-3xl fontFamily-primary font-weight-500">
+                            class="mb-8 mt-12 text-secondary-blue-200 fontFamily-primary text-3xl font-weight-500 md-max:mx-auto">
                             Share your bookmarks</h2>
-                        <p class="mb-8 text-secondary-blue-100 basicFont w-3/4">Lorem ipsum, dolor sit amet consectetur
+                        <p class="mb-8 text-secondary-blue-100 basicFont md-max:w-4/12 w-3/4 md-max:text-center">Lorem
+                            ipsum, dolor sit amet consectetur
                             adipisicing elit. Provident repellendus ut amet neque minima voluptas facilis doloremque
                             reprehenderit aspernatur inventore odio dicta, quia quis dolores?</p>
                         <input type="button" class="text-sm p-3 btn-secondary w-36" value="More Info">
@@ -111,15 +130,16 @@
                 </section>
 
             </div>
-            <div class="mt-36">
+            <div class="mt-36 md-max:mb-5 md-max:mx-10 md-max:text-center items-center">
                 <h1
                     class="mx-auto w-fit mb-8 mt-12 text-secondary-blue-200 text-3xl fontFamily-primary font-weight-500">
                     Download the extension</h1>
-                <p class="mb-8 text-secondary-blue-100 basicFont w-4/12 mx-auto text-center">Lorem ipsum dolor sit amet
+                <p class="mb-8 text-secondary-blue-100 basicFont lg:w-4/12 mx-10 lg:mx-auto text-center">Lorem ipsum
+                    dolor sit amet
                     consectetur, adipisicing elit. Quae adipisci officiis minus eligendi totam
                     aliquam amet iure, animi cumque modi eum consequuntur fuga. Eaque,rem sit iure.</p>
             </div>
-            <div class="flex gap-14 justify-center mt-5">
+            <div class="flex gap-14 justify-center mt-5 md-max:flex-col md-max:items-center">
                 <div class="w-60 h-fit px-3 py-6 shadow-xl rounded-xl hover:scale-110 hover:shadow-2xl transition-all">
                     <img src="images/logo-chrome.svg" class="block mx-auto" alt="">
                     <p
@@ -159,16 +179,17 @@
                         value="Add & Install Extension">
                 </div>
             </div>
-            <div class="mt-56">
+            <div class="lg:mt-56 mt-36 md-max:mb-5 md-max:mx-10 md-max:text-center items-center">
                 <h1
                     class="mx-auto w-fit mb-8 mt-12 text-secondary-blue-200 text-3xl fontFamily-primary font-weight-500">
                     Frequently Asked Questions</h1>
-                <p class="mb-8 text-secondary-blue-100 basicFont w-4/12 mx-auto text-center">Lorem ipsum dolor sit amet
+                <p class="mb-8 text-secondary-blue-100 basicFont lg:w-4/12 mx-10 lg:mx-auto text-center">Lorem ipsum
+                    dolor sit amet
                     consectetur, adip Lorem ipsum dolor sit amet consectetur adipisicing. cuiure.</p>
             </div>
 
 
-            <div id="accordion-flush" data-accordion="collapse" class="w-2/4 mx-auto mt-3"
+            <div id="accordion-flush" data-accordion="collapse" class="lg:w-2/4 md-max:w-3/4 mx-auto mt-3"
                 data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
                 data-inactive-classes="text-gray-500 dark:text-gray-400">
 
@@ -284,7 +305,7 @@
 
         </section>
     </div>
-    <footer class="bg-primary-blue h-96 mt-28 bottom-0 relative">
+    <footer class="bg-primary-blue h-96 md-max:h-[400px] mt-28 bottom-0 relative">
         <br>
         <p class="uppercase mb-8 mt-5 tracking-widest text-white basicFont w-fit mx-auto">35.000+ already joined
         </p>
@@ -292,7 +313,8 @@
             Stay up-to-date with what<br>we're doing</h1>
 
 
-        <form id="form" class="w-fit mx-auto" action="" onsubmit="return false" novalidate>
+        <form id="form" class="w-fit mx-auto md-max:mx-10 md-max:flex md-max:flex-col" action="" onsubmit="return false"
+            novalidate>
             <div class="relative mt-1 w-fit inline">
                 <!-- <div id="errorIcon" class="absolute inset-y-0 right-0 items-center pr-3 pointer-events-none errorM">
                     <i class="fa-solid fa-circle-exclamation text-primary-red bg-transparent text-lg"></i>
@@ -306,16 +328,20 @@
                     class="absolute bg-primary-red text-white w-72 px-2 py-0.5 text-sm rounded-b-lg errorM">Whoops!
                     error</div>
             </div>
-            <input id="validationBtn" class="btn-primary p-2 border-0 h-10" type="submit" value="Contact Us">
+            <input id="validationBtn" class="btn-primary p-2 border-0 h-10 md-max:w-full md-max:mt-2" type="submit"
+                value="Contact Us">
         </form>
-        <div class="h-20 w-full mt-8 bg-secondary-blue-200 grid grid-cols-6 items-center absolute bottom-0">
-            <img src="images/logo-white.svg" alt="" class="h-auto w-fit ml-14 col-span-1">
-            <div class="mx-0 col-span-2">
+
+        <div
+            class="md-max:flex md-max:flex-col md-max:items-center lg:h-20 md-max:h-fit w-full mt-8 bg-secondary-blue-200 flex flex-row items-center lg:absolute bottom-0">
+
+            <img src="images/logo-white.svg" alt="" class="h-auto w-fit lg:mx-14 lg:shrink md-max:mb-3 md-max:mt-6">
+            <div class="mx-0 md-max:flex md-max:flex-col md-max:items-center">
                 <a class="p-2 uppercase hover:text-primary-red text-white basicFont" href="">Features</a>
                 <a class="p-2 uppercase hover:text-primary-red text-white basicFont" href="">Pricing</a>
                 <a class="p-2 uppercase hover:text-primary-red text-white basicFont" href="">Contact</a>
             </div>
-            <div class="mr-32 ml-auto w-fit col-span-3">
+            <div class="lg:mr-32 lg:ml-auto md-max:mx-auto w-fit md-max:mb-3 md-max:mt-6">
                 <i class="fa-brands fa-facebook hover:text-primary-red text-white bg-transparent text-2xl mx-3"></i>
                 <i class="w-6 h-6 fab fa-twitter hover:text-primary-red text-white text-2xl mx-3"></i>
             </div>

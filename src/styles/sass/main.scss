@@ -16,10 +16,11 @@ nav a {
 }
 
 .shape {
-    height: 300px;
-    width: 850px;
+    height: 19rem;
+    width: 53rem;
     background-color: $primary-blue;
     display: inline-block;
+    
 }
 
 @layer components {
@@ -50,7 +51,7 @@ nav a {
 
 .tl_list li {
     margin: 0;
-    width: 33.3333%;
+    @apply lg:w-1/3 w-full; 
     text-align: center;
     border-radius: 4px 4px 0 0;
 }
