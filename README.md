@@ -5,9 +5,7 @@
 - html
 - css
 - js
-- jquery
 - tailwindcss
-- bootstrap
 - sass
 - webpack
 - PostCss
